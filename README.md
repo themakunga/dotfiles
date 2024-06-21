@@ -19,6 +19,28 @@ Homebrew installs the stuff you need that Apple (or your Linux system) didn’t.
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 ```
 
+#### ZSH
+
+Zsh is a shell designed for interactive use, although it is also a powerful scripting language.
+
+[documentation](https://www.zsh.org)
+
+**macOS**
+
+```bash
+brew install zsh
+```
+
+**linux**
+```bash
+apt install zsh
+```
+
+change shell, only for the current user, after this you HAVE to relogin to work
+
+```bash
+chsh -s $(which zsh)
+```
 
 #### STOW
 
