@@ -106,4 +106,21 @@ _debian install by default version 0.38_
 sudo apt install fzf
 ```
 
-## Install 
+## Install
+
+after met the pre requisites
+
+clone the repository
+
+```bash
+git clone https://github.com/TheMakunga/dotfiles .dotfiles
+
+```
+
+excecute stow in the directory
+
+```bash
+cd .dotfiles
+stow .
+```
+
