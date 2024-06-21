@@ -2,10 +2,31 @@
 
 This repo works as a config backup to my shell environment and neovim configuration, this is for my use only but if you like it feel free to use it, if you have any suggestion, raise a issue
 
+
+as linux I only use Debian so thats how the scripts will be 
+
+
 ## Terminal environment
 
 ### Pre-requisites
 
+### GIT
+
+Git is a free and open source distributed version control system designed to handle everything from small to very large projects with speed and efficiency.
+
+[documentation](https://git-scm.com)
+
+**macOS**
+
+```bash
+brew install git
+```
+
+**linux**
+
+```bash
+sudo apt install git
+```
 
 #### Homebrew (if you are using macOS)
 
@@ -84,3 +105,5 @@ _debian install by default version 0.38_
 ```bash
 sudo apt install fzf
 ```
+
+## Install 
