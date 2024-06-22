@@ -63,6 +63,32 @@ change shell, only for the current user, after this you HAVE to relogin to work
 chsh -s $(which zsh)
 ```
 
+#### Oh My Posh
+
+Oh My Posh is a custom prompt engine for any shell that has the ability to adjust the prompt string with a function or variable.
+
+[documentation](https://ohmyposh.dev/docs/)
+
+ **macOS**
+
+```bash
+brew install jandedobbeleer/oh-my-posh/oh-my-posh
+```
+
+> As the standard terminal has issues displaying the ANSI characters correctly, you might want to skip loading just for that terminal and instead of the line above, place this in your ~/.zshrc:
+```bash
+if [ "$TERM_PROGRAM" != "Apple_Terminal" ]; then
+  eval "$(oh-my-posh init zsh)"
+fi
+```
+Note this will still load Oh My Posh for iTerm2 or any other modern day macOS terminal that supports ANSI characters.
+
+**linux**
+
+```bash
+curl -s https://ohmyposh.dev/install.sh | bash -s
+```
+
 #### STOW
 
 
