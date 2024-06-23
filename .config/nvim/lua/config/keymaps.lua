@@ -48,4 +48,4 @@ km.set("n", "<leader>lg", "<cmd>LazyGit<cr>", { desc = "Open LazyGit" })
 
 -- autosession
 km.set("n", "<leader>wr", "<cmd>SessionRestore<CR>", { desc = "Restore session for cwd" })
-    km.set("n", "<leader>ws", "<cmd>SessionSave<CR>", { desc = "Save current session of root dir" })
+km.set("n", "<leader>ws", "<cmd>SessionSave<CR>", { desc = "Save current session of root dir" })
