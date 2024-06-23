@@ -24,6 +24,9 @@ zinit snippet OMZP::docker
 zinit snippet OMZP::docker-compose
 zinit snippet OMZP::gitignore
 zinit snippet OMZP::node
+zinit snippet OMZL::directories.zsh
+zinit snippet OMZL::clipboard.zsh
+zinit snippet OMZL::termsupport.zsh
 
 # load completions
 autoload -U compinit && compinit
