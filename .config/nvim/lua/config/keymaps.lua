@@ -51,4 +51,4 @@ km.set("n", "<leader>wr", "<cmd>SessionRestore<CR>", { desc = "Restore session f
 km.set("n", "<leader>ws", "<cmd>SessionSave<CR>", { desc = "Save current session of root dir" })
 
 -- markdown preview
-km.set("n", "<leader>mp", "<cmd>MarkdownPreviewToggle<CR>", { desc = "Toggle Preview of markdown file" })
+km.set("n", "<leader>fp", "<cmd>MarkdownPreviewToggle<CR>", { desc = "Toggle Preview of markdown file" })
