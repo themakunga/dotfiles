@@ -1,6 +1,11 @@
 # set zinit directory
 ZINIT_HOME="${XGD_DATA_HOME:-${HOME}/.local/share}/zinit/zinit.git"
 
+if [[ -f "/opt/homebrew/bin/brew" ]] then
+  # If you're using macOS, you'll want this enabled
+  eval "$(/opt/homebrew/bin/brew shellenv)"
+fi
+
 if [ ! -d "$ZINIT_HOME" ]; then
 	mkdir -p "$(dirname $ZINIT_HOME)"
 	git clone https://github.com/zdharma-continuum/zinit.git "$ZINIT_HOME"
@@ -9,6 +14,10 @@ fi
 source "${ZINIT_HOME}/zinit.zsh"
 
 eval "$(oh-my-posh init zsh --config $HOME/.config/ohmyposh/config.yml)"
+
+if [ "$TERM_PROGRAM" != "Apple_Terminal" ]; then
+  eval "$(oh-my-posh init zsh)"
+fi
 
 # plugins
 zinit light zsh-users/zsh-syntax-highlighting
@@ -26,7 +35,6 @@ zinit snippet OMZP::gitignore
 zinit snippet OMZP::node
 zinit snippet OMZL::directories.zsh
 zinit snippet OMZL::clipboard.zsh
-zinit snippet OMZL::termsupport.zsh
 
 # load completions
 autoload -U compinit && compinit
@@ -65,3 +73,7 @@ alias lla='ls -ltra'
 
 # shell integrations
 eval "$(fzf --zsh)"
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
