@@ -1,10 +1,31 @@
 # Dotfiles
 
-[[toc]]
+<!-- mtoc-start -->
+
+* [Services / Configurations available](#services--configurations-available)
+* [Instalation](#instalation)
+* [Pre-requisites](#pre-requisites)
+  * [GIT](#git)
+  * [Homebrew (if you are using macOS)](#homebrew-if-you-are-using-macos)
+  * [NVM and nodeJS](#nvm-and-nodejs)
+  * [ZSH](#zsh)
+  * [Oh My Posh](#oh-my-posh)
+  * [STOW](#stow)
+  * [Fuzzy Finder (FZF)](#fuzzy-finder-fzf)
+  * [Lazygit](#lazygit)
+  * [NeoVim](#neovim)
+
+<!-- mtoc-end -->
 
 This repo works as a config backup to my shell environment and neovim configuration, this is for my use only but if you like it feel free to use it, if you have any suggestion, raise a issue
 
 as linux I only use Debian so thats how the scripts will be
+
+## Services / Configurations available
+
+- `zsh` configuration using `zinit`
+- `oh my posh` as terminal theme
+- `neovim`
 
 ## Instalation
 
