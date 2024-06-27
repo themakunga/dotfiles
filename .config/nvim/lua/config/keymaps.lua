@@ -23,6 +23,12 @@ km.set("n", "<leader>tn", "<cmd>tabn<CR>", { desc = "Go to nex tab" })
 km.set("n", "<leader>tp", "<cmd>tabp<CR>", { desc = "Go to previoud tab" })
 km.set("n", "<leader>tf", "<cmd>tabnew %<CR>", { desc = "Open current buffer in new tab" })
 
+-- move lines
+km.set("n", "<A-Down>", ":m .+1<CR>==", { desc = "Move the current line up" })
+km.set("n", "<A-Up>", ":m .-2<CR>==", { desc = "Move the current line down" })
+km.set("v", "<A-Up>", ":m '>-2<CR>gv=gv", { desc = "Move current selection down" })
+km.set("v", "<A-Down>", ":m '<+1<CR>gv=gv", { desc = "Move current selection up" })
+
 -- lazy plugins
 km.set("n", "<leader>L", "<cmd>Lazy<CR>", { desc = "Open Lazy UI" })
 
