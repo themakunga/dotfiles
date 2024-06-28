@@ -34,7 +34,7 @@ km.set("n", "<leader>L", "<cmd>Lazy<CR>", { desc = "Open Lazy UI" })
 
 -- terminal
 km.set("n", "<leader>te", ":ToggleTerm<CR>", { desc = "Toggle Terminal" })
-km.set("t", "<Esc>", "<C-\\><C-n>", { desc = "Close Terminal" })
+km.set("t", "<EscEsc>", "<C-\\><C-n>", { desc = "Close Terminal" })
 
 -- nvim-tree
 km.set("n", "<leader>ee", "<cmd>NvimTreeFocus<CR>", { desc = "Toggle file explorer" })
