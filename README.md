@@ -8,6 +8,9 @@
   * [GIT](#git)
   * [Homebrew (if you are using macOS)](#homebrew-if-you-are-using-macos)
   * [NVM and nodeJS](#nvm-and-nodejs)
+  * [Docker & Colima](#docker--colima)
+    * [Docker](#docker)
+    * [Colima](#colima)
   * [ZSH](#zsh)
   * [Oh My Posh](#oh-my-posh)
   * [STOW](#stow)
@@ -93,6 +96,16 @@ nvm install node # "node" is an alias for the latest version
 nvm install 14.7.0 # or 16.3.0, 12.22.1, etc
 
 ```
+
+### Docker & Colima
+
+#### Docker
+
+Docker is an open platform for developing, shipping, and running applications. Docker enables you to separate your applications from your infrastructure so you can deliver software quickly. With Docker, you can manage your infrastructure in the same ways you manage your applications. By taking advantage of Docker's methodologies for shipping, testing, and deploying code, you can significantly reduce the delay between writing code and running it in production.
+
+[documentation](https://docs.docker.com/guides/docker-overview/)
+
+#### Colima
 
 ### ZSH
 
