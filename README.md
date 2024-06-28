@@ -8,6 +8,7 @@
   * [GIT](#git)
   * [Homebrew (if you are using macOS)](#homebrew-if-you-are-using-macos)
   * [NVM and nodeJS](#nvm-and-nodejs)
+    * [Install PNPM](#install-pnpm)
   * [Docker (& Colima)](#docker--colima)
     * [Docker](#docker)
     * [Colima](#colima)
@@ -94,7 +95,14 @@ _this comand install and make available the `nvm` command on your terminal, afte
 nvm install node # "node" is an alias for the latest version
 
 nvm install 14.7.0 # or 16.3.0, 12.22.1, etc
+```
 
+#### Install PNPM
+
+**macOS and linux**
+
+```bash
+curl -fsSL https://get.pnpm.io/install.sh | sh -
 ```
 
 ### Docker (& Colima)
