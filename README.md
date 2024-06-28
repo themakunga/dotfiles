@@ -8,7 +8,7 @@
   * [GIT](#git)
   * [Homebrew (if you are using macOS)](#homebrew-if-you-are-using-macos)
   * [NVM and nodeJS](#nvm-and-nodejs)
-  * [Docker & Colima](#docker--colima)
+  * [Docker (& Colima)](#docker--colima)
     * [Docker](#docker)
     * [Colima](#colima)
   * [ZSH](#zsh)
@@ -97,7 +97,7 @@ nvm install 14.7.0 # or 16.3.0, 12.22.1, etc
 
 ```
 
-### Docker & Colima
+### Docker (& Colima)
 
 #### Docker
 
@@ -105,7 +105,52 @@ Docker is an open platform for developing, shipping, and running applications. D
 
 [documentation](https://docs.docker.com/guides/docker-overview/)
 
+**macOS**
+
+```bash
+brew install docker
+```
+
+_this only install the runtime, for a gui o tgui google it_
+
+**linux**
+
+```bash
+# remove old instalations
+for pkg in docker.io docker-doc docker-compose podman-docker containerd runc; do sudo apt-get remove $pkg; done
+
+# Add Docker's official GPG key:
+sudo apt-get update
+sudo apt-get install ca-certificates curl
+sudo install -m 0755 -d /etc/apt/keyrings
+sudo curl -fsSL https://download.docker.com/linux/debian/gpg -o /etc/apt/keyrings/docker.asc
+sudo chmod a+r /etc/apt/keyrings/docker.asc
+
+# Add the repository to Apt sources:
+echo \
+  "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.asc] https://download.docker.com/linux/debian \
+  $(. /etc/os-release && echo "$VERSION_CODENAME") stable" | \
+  sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
+sudo apt-get update
+
+sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
+```
+
 #### Colima
+
+Colima - container runtimes on macOS (and Linux) with minimal setup.
+
+[documentation](https://github.com/abiosoft/colima)
+
+**macOS**
+
+```bash
+brew install colima
+
+colima start
+
+docker context use colima
+```
 
 ### ZSH
 
