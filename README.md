@@ -32,7 +32,7 @@ as linux I only use Debian so thats how the scripts will be
 
 ## Instalation
 
-make sure to complete the [Pre-requisites](README#Pre-requisites) , using a true color terminal emulator like wezterm or iTerm2, you can clone the repository and run `stow` in the dotfiles dir
+make sure to complete the [Pre-requisites](#Pre-requisites) , using a true color terminal emulator like wezterm or iTerm2, you can clone the repository and run `stow` in the dotfiles dir
 
 ```bash
 git clone https://github.com/themakunga/dotfiles .dotfiles # this clone the repo to a hidden directory
