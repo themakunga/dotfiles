@@ -8,11 +8,15 @@
   * [GIT](#git)
   * [Homebrew (if you are using macOS)](#homebrew-if-you-are-using-macos)
   * [NVM and nodeJS](#nvm-and-nodejs)
+    * [Install PNPM](#install-pnpm)
   * [Docker (& Colima)](#docker--colima)
     * [Docker](#docker)
     * [Colima](#colima)
   * [ZSH](#zsh)
   * [Oh My Posh](#oh-my-posh)
+  * [Pulumi and Terraform](#pulumi-and-terraform)
+    * [Terraform](#terraform)
+    * [Pulumi](#pulumi)
   * [STOW](#stow)
   * [Fuzzy Finder (FZF)](#fuzzy-finder-fzf)
   * [Lazygit](#lazygit)
@@ -94,7 +98,14 @@ _this comand install and make available the `nvm` command on your terminal, afte
 nvm install node # "node" is an alias for the latest version
 
 nvm install 14.7.0 # or 16.3.0, 12.22.1, etc
+```
 
+#### Install PNPM
+
+**macOS and linux**
+
+```bash
+curl -fsSL https://get.pnpm.io/install.sh | sh -
 ```
 
 ### Docker (& Colima)
@@ -202,6 +213,47 @@ Note this will still load Oh My Posh for iTerm2 or any other modern day macOS te
 
 ```bash
 curl -s https://ohmyposh.dev/install.sh | bash -s
+```
+
+### Pulumi and Terraform
+
+#### Terraform
+
+Infrastructure automation to provision and manage resources in any cloud or data center.
+
+[documentation](https://developer.hashicorp.com/terraform?product_intent=terraform)
+
+**macOS**
+
+```bash
+brew tap hashicorp/tap
+brew install hashicorp/tap/terraform
+```
+
+**linux**
+
+```bash
+wget -O- https://apt.releases.hashicorp.com/gpg | sudo gpg --dearmor -o /usr/share/keyrings/hashicorp-archive-keyring.gpg
+echo "deb [signed-by=/usr/share/keyrings/hashicorp-archive-keyring.gpg] https://apt.releases.hashicorp.com $(lsb_release -cs) main" | sudo tee /etc/apt/sources.list.d/hashicorp.list
+sudo apt update && sudo apt install terraform
+```
+
+#### Pulumi
+
+Pulumi is an open source infrastructure as code tool for creating, deploying, and managing cloud infrastructure.
+
+[documentation](https://www.pulumi.com/docs/)
+
+**macOS**
+
+```bash
+brew install pulumi/tap/pulumi
+```
+
+**linux**
+
+```bash
+curl -fsSL https://get.pulumi.com | sh
 ```
 
 ### STOW
