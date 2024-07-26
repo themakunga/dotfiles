@@ -6,6 +6,7 @@
 * [Instalation](#instalation)
 * [Pre-requisites](#pre-requisites)
   * [GIT](#git)
+  * [Nerd Fonts](#nerd-fonts)
   * [Kitty](#kitty)
   * [Homebrew (if you are using macOS)](#homebrew-if-you-are-using-macos)
   * [NVM and nodeJS](#nvm-and-nodejs)
@@ -65,6 +66,23 @@ brew install git
 
 ```bash
 sudo apt install git
+```
+
+### Nerd Fonts
+
+Nerd Fonts is a project that patches developer targeted fonts with a high number of glyphs (icons). Specifically to add a high number of extra glyphs from popular 'iconic fonts' such as Font Awesome, Devicons, Octicons, and others.
+
+[documentation](https://github.com/ryanoasis/nerd-fonts?tab=readme-ov-file#option-2-homebrew-fonts)
+
+**macOs and linux**
+
+```bash
+
+git clone https://github.com/ryanoasis/nerd-fonts.git
+cd .nerd-fonts
+
+./install.sh # this install all fonts, its a lot
+
 ```
 
 ### Kitty
