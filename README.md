@@ -6,6 +6,7 @@
 * [Instalation](#instalation)
 * [Pre-requisites](#pre-requisites)
   * [GIT](#git)
+  * [Kitty](#kitty)
   * [Homebrew (if you are using macOS)](#homebrew-if-you-are-using-macos)
   * [NVM and nodeJS](#nvm-and-nodejs)
     * [Install PNPM](#install-pnpm)
@@ -65,6 +66,21 @@ brew install git
 ```bash
 sudo apt install git
 ```
+
+### Kitty
+
+The fast, feature-rich, GPU based terminal emulator
+
+[documentation](https://sw.kovidgoyal.net/kitty/)
+
+**macOs and linux**
+
+```bash
+curl -L https://sw.kovidgoyal.net/kitty/installer.sh | sh /dev/stdin
+```
+
+> [!note] Note
+> The binaries will be installed in the standard location for your OS, /Applications/kitty.app on macOS and ~/.local/kitty.app on Linux. The installer only touches files in that directory. To update kitty, simply re-run the command.
 
 ### Homebrew (if you are using macOS)
 
