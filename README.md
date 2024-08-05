@@ -6,6 +6,8 @@
 * [Instalation](#instalation)
 * [Pre-requisites](#pre-requisites)
   * [GIT](#git)
+  * [Nerd Fonts](#nerd-fonts)
+  * [Kitty](#kitty)
   * [Homebrew (if you are using macOS)](#homebrew-if-you-are-using-macos)
   * [NVM and nodeJS](#nvm-and-nodejs)
     * [Install PNPM](#install-pnpm)
@@ -36,7 +38,7 @@ as linux I only use Debian so thats how the scripts will be
 
 ## Instalation
 
-make sure to complete the [Pre-requisites](README#Pre-requisites) , using a true color terminal emulator like wezterm or iTerm2, you can clone the repository and run `stow` in the dotfiles dir
+make sure to complete the [Pre-requisites](#Pre-requisites) , using a true color terminal emulator like wezterm or iTerm2, you can clone the repository and run `stow` in the dotfiles dir
 
 ```bash
 git clone https://github.com/themakunga/dotfiles .dotfiles # this clone the repo to a hidden directory
@@ -65,6 +67,38 @@ brew install git
 ```bash
 sudo apt install git
 ```
+
+### Nerd Fonts
+
+Nerd Fonts is a project that patches developer targeted fonts with a high number of glyphs (icons). Specifically to add a high number of extra glyphs from popular 'iconic fonts' such as Font Awesome, Devicons, Octicons, and others.
+
+[documentation](https://github.com/ryanoasis/nerd-fonts?tab=readme-ov-file#option-2-homebrew-fonts)
+
+**macOs and linux**
+
+```bash
+
+git clone https://github.com/ryanoasis/nerd-fonts.git
+cd .nerd-fonts
+
+./install.sh # this install all fonts, its a lot
+
+```
+
+### Kitty
+
+The fast, feature-rich, GPU based terminal emulator
+
+[documentation](https://sw.kovidgoyal.net/kitty/)
+
+**macOs and linux**
+
+```bash
+curl -L https://sw.kovidgoyal.net/kitty/installer.sh | sh /dev/stdin
+```
+
+> [!note] Note
+> The binaries will be installed in the standard location for your OS, /Applications/kitty.app on macOS and ~/.local/kitty.app on Linux. The installer only touches files in that directory. To update kitty, simply re-run the command.
 
 ### Homebrew (if you are using macOS)
 
