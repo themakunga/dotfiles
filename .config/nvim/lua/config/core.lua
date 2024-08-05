@@ -13,14 +13,14 @@ opt.autoindent = true -- copy indent from previous line
 
 opt.wrap = false
 
--- search settings 
+-- search settings
 opt.ignorecase = true -- ignore case in search
 opt.smartcase = true -- if detect mixed case be case-sensitive
 
 opt.cursorline = true -- highlight current line
 
 -- enable termguicolors remember use a true color terminal
-opt.termguicolors =  true
+opt.termguicolors = true
 opt.background = "dark" -- for default scheme
 opt.signcolumn = "yes" -- prevent shift of text showin the sign column
 
@@ -34,4 +34,6 @@ opt.clipboard:append("unnamedplus") -- use system clipboard
 opt.splitright = true -- vertical split to right
 opt.splitbelow = true -- horizontal split down or bottom
 
+opt.swapfile = false
 
+vim.o.autoread = true
