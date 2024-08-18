@@ -1,6 +1,10 @@
-vim.g.netrw_liststyle = 3
-
 local opt = vim.opt
+
+local global = vim.g
+
+local o = vim.o
+
+global.netrw_liststyle = 3
 
 opt.relativenumber = true
 opt.number = true
@@ -35,5 +39,16 @@ opt.splitright = true -- vertical split to right
 opt.splitbelow = true -- horizontal split down or bottom
 
 opt.swapfile = false
+opt.syntax = "on"
+opt.mouse = "a"
+opt.encoding = "UTF-8"
+opt.title = true
+opt.hidden = true
+opt.ttimeoutlen = 0
+opt.wildmenu = true
+opt.showcmd = true
+opt.showmatch = true
+opt.inccommand = "split"
+opt.ruler = true
 
-vim.o.autoread = true
+o.autoread = true
