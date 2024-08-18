@@ -1,0 +1,5 @@
+escape ^Aa
+
+register S ^A
+
+bindkey "^[ " process S
