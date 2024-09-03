@@ -9,6 +9,7 @@
   * [Nerd Fonts](#nerd-fonts)
   * [Kitty](#kitty)
   * [Homebrew (if you are using macOS)](#homebrew-if-you-are-using-macos)
+  * [TMUX](#tmux)
   * [NVM and nodeJS](#nvm-and-nodejs)
     * [Install PNPM](#install-pnpm)
   * [Docker (& Colima)](#docker--colima)
@@ -110,6 +111,24 @@ Homebrew installs the stuff you need that Apple (or your Linux system) didn’t.
 
 ```bash
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+```
+
+### TMUX
+
+tmux is a terminal multiplexer. It lets you switch easily between several programs in one terminal, detach them (they keep running in the background) and reattach them to a different terminal.
+
+[documentation](https://github.com/tmux/tmux/wiki)
+
+**macOS**
+
+```bash
+brew install tmux
+```
+
+**linux**
+
+```bash
+sudo apt install tmux
 ```
 
 ### NVM and nodeJS
