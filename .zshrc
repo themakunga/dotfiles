@@ -79,3 +79,14 @@ export NVM_DIR="$HOME/.nvm"
 
 # add Pulumi to the PATH
 export PATH=$PATH:/home/nicolas/.pulumi/bin
+
+
+## zsh scripts
+#
+#tmux session
+source ~/.zsh_scripts/tmux-session.zsh 
+
+## import autocompletions
+#
+#fjira
+source ~/.zsh_autocompletions/fjira.zsh 
