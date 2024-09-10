@@ -1,5 +1,5 @@
 # Start the tmux session if not alraedy in the tmux session
-if [[ ! -n $TMUX  ]]; then
+if [[ -z $TMUX ]] && [[ -n $SSH_TTY ]]; then
   # Get the session IDs
   session_ids="$(tmux list-sessions)"
 
