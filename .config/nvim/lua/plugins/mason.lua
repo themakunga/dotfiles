@@ -50,7 +50,6 @@ return {
 				"puppet",
 				"pylsp",
 				"rust_analyzer",
-				"sorbet",
 				"sqlls",
 				"somesass_ls",
 				"taplo",
