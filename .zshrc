@@ -90,3 +90,11 @@ source ~/.zsh_scripts/tmux-session.zsh
 #
 #fjira
 source ~/.zsh_autocompletions/fjira.zsh 
+
+# pnpm
+export PNPM_HOME="/home/nicolas/.local/share/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+# pnpm end
