@@ -1,6 +1,7 @@
 # yaml-language-server: $schema=https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json
 version: 2
 final_space: true
+auto_upgrade: true
 console_title_template: "{{ .Shell }} in {{ .Folder }}"
 blocks:
   - type: prompt
@@ -57,4 +58,3 @@ secondary_prompt:
   foreground: magenta
   background: transparent
   template: "❯❯ "
-
