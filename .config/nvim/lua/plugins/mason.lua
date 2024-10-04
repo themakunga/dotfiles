@@ -41,7 +41,7 @@ return {
 				"graphql",
 				"groovyls",
 				"html",
-				"tsserver",
+				"ts_ls",
 				"jqls",
 				"lua_ls",
 				"markdown_oxide",
