@@ -4,5 +4,8 @@ return {
 	cmd = { "Mtoc" }, -- Or, lazy load on "Mtoc" command
 	opts = {
 		-- Your configuration here (optional)
+		headings = {
+			pattern = "^(##+)%s+(.+)$",
+		},
 	},
 }

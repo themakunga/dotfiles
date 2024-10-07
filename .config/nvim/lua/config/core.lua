@@ -15,8 +15,9 @@ opt.shiftwidth = 2 -- 2 spaces for indent width
 opt.expandtab = true -- convert tab to spaces
 opt.autoindent = true -- copy indent from previous line
 
-opt.wrap = false
-
+opt.wrap = true
+vim.opt_local.wrap = true
+opt.textwidth = 120
 -- search settings
 opt.ignorecase = true -- ignore case in search
 opt.smartcase = true -- if detect mixed case be case-sensitive
