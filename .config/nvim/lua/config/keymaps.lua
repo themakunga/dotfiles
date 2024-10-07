@@ -63,6 +63,6 @@ km.set("n", "<leader>ws", "<cmd>SessionSave<CR>", { desc = "Save current session
 km.set("n", "<leader>fp", "<cmd>MarkdownPreviewToggle<CR>", { desc = "Toggle Preview of markdown file" })
 
 -- markdown toc
-km.set("n", "<leader>ln", "<cmd>Mtoc insert<cr>", { desc = "Markdown TOC insert on cursor position" })
-km.set("n", "<leader>lu", "<cmd>Mtoc update<cr>", { desc = "Markdown TOC update" })
-km.set("n", "<leader>lr", "<cmd>Mtoc remove<cr>", { desc = "Markdown TOC remove" })
+km.set("n", "<leader>mti", "<cmd>Mtoc insert<cr>", { desc = "Markdown TOC insert on cursor position" })
+km.set("n", "<leader>mtu", "<cmd>Mtoc update<cr>", { desc = "Markdown TOC update" })
+km.set("n", "<leader>mtr", "<cmd>Mtoc remove<cr>", { desc = "Markdown TOC remove" })
