@@ -7,8 +7,5 @@ return {
 		headings = {
 			pattern = "^(##+)%s+(.+)$",
 		},
-		toc_list = {
-			markers = "1.",
-		},
 	},
 }
