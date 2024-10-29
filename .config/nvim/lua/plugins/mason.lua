@@ -42,7 +42,7 @@ return {
         "groovyls",
         "html",
         "eslint",
-        "tsp_server",
+        "ts_ls",
         "jqls",
         "lua_ls",
         "markdown_oxide",
