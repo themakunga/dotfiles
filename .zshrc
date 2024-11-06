@@ -69,6 +69,7 @@ alias ls='ls --color'
 alias ll='ls -lrt'
 alias llh='ls -ltrh'
 alias lla='ls -ltra'
+alias lg='lazygit'
 
 # shell integrations
 eval "$(fzf --zsh)"
@@ -101,3 +102,5 @@ esac
 #
 # GOLANG
 export PATH=$PATH:/usr/local/go/bin
+clear
+neofetch
