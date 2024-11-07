@@ -86,6 +86,7 @@ export PATH=$PATH:/home/nicolas/.pulumi/bin
 #
 #tmux session
 source ~/.zsh_scripts/tmux-session.zsh 
+source ~/.zsh_scripts/auto-nvm.zsh
 
 ## import autocompletions
 #
