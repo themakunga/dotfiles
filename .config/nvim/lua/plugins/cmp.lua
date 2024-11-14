@@ -47,7 +47,7 @@ return {
       }),
 
       formatting = {
-        format = function(entry, items)
+        format = function(entry, item)
           local color_item = require("nvim-highlight-colors").format(entry, {
             item = lspkind.cmp_format({
               maxwidth = 50,
