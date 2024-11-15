@@ -12,6 +12,11 @@ return {
     local actions = require("telescope.actions")
 
     telescope.setup({
+      pickers = {
+        find_files = {
+          hidden = true,
+        },
+      },
       defauls = {
         path_display = { "smart" },
         mappings = {
@@ -25,5 +30,5 @@ return {
     })
 
     telescope.load_extension("fzf")
-  end
+  end,
 }
