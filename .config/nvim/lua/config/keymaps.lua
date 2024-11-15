@@ -33,8 +33,8 @@ km.set("v", "<A-Down>", ":m '<+1<CR>gv=gv", { desc = "Move current selection up"
 km.set("n", "<leader>L", "<cmd>Lazy<CR>", { desc = "Open Lazy UI" })
 
 -- terminal
-km.set("n", "<leader>te", ":ToggleTerm<CR>", { desc = "Toggle Terminal" })
-km.set("t", "<Esc>", [[<C-\><C-n>]], { desc = "Close Terminal" })
+km.set("n", "<leader>te", '<CMD>lua require("FTerm").toggle()<CR>', { desc = "Toggle Terminal" })
+km.set("t", "<C-c>", '<C-\\><C-n><CMD>lua require("FTerm").toggle()<CR>', { desc = "Close Terminal" })
 
 -- nvim-tree
 km.set("n", "<leader>ee", "<cmd>NvimTreeFocus<CR>", { desc = "Toggle file explorer" })
