@@ -1,34 +1,18 @@
-local opt = vim.opt
+local M = {}
 
-local global = vim.g
+M.setup = function()
 
-local o = vim.o
+  local global = vim.g
+  local opt = vim.opt
+  local o = vim.o
 
-global.netrw_liststyle = 3
-
-opt.relativenumber = true
-opt.number = true
-
--- tabs and indentation
-opt.tabstop = 2 -- 2 spaces for tabs (soft tabs)
-opt.shiftwidth = 2 -- 2 spaces for indent width
-opt.expandtab = true -- convert tab to spaces
-opt.autoindent = true -- copy indent from previous line
-
-opt.wrap = true
-vim.opt_local.wrap = true
-opt.textwidth = 120
--- search settings
-opt.ignorecase = true -- ignore case in search
+  global.mapleader = " "
+  opt.ignorecase = true -- ignore case in search
 opt.smartcase = true -- if detect mixed case be case-sensitive
 
-opt.cursorline = true -- highlight current line
-
--- enable termguicolors remember use a true color terminal
 opt.termguicolors = true
 opt.background = "dark" -- for default scheme
 opt.signcolumn = "yes" -- prevent shift of text showin the sign column
-
 -- backspace
 opt.backspace = "indent,eol,start" -- allow backspace on indent, end of line or start position in insertmode
 
@@ -41,7 +25,6 @@ opt.splitbelow = true -- horizontal split down or bottom
 
 opt.swapfile = false
 opt.syntax = "on"
-opt.mouse = "a"
 opt.encoding = "UTF-8"
 opt.title = true
 opt.hidden = true
@@ -53,3 +36,10 @@ opt.inccommand = "split"
 opt.ruler = true
 
 o.autoread = true
+end
+
+if not pcall(debug.getlocal, 4, 1) then
+  M.setup()
+end
+
+return M
