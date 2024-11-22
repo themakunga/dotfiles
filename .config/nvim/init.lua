@@ -78,11 +78,12 @@ lazy.setup({
   require("plugins.markdown.mdsectionnumbers").plugin,
   --
   -- lsp
-  require("plugins.LSP.cmp").plugin,
-  require("plugins.LSP.lspconfig").plugin,
-  require("plugins.LSP.mason").plugin,
-  require("plugins.LSP.conform").plugin,
-  require("plugins.LSP.autopairs").plugin,
+  require("plugins.LSP.lsp-zero").plugin,
+  -- require("plugins.LSP.cmp").plugin,
+  -- require("plugins.LSP.lspconfig").plugin,
+  -- require("plugins.LSP.mason").plugin,
+  -- require("plugins.LSP.conform").plugin,
+  -- require("plugins.LSP.autopairs").plugin,
   -- dap
   require("plugins.DAP.main").plugin,
 })
