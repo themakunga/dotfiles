@@ -69,6 +69,7 @@ lazy.setup({
   -- git
   require("plugins.git.gitsigns").plugin,
   require("plugins.git.lazygit").plugin,
+  require("plugins.git.gitportal").plugin,
 
   -- markdown
   require("plugins.markdown.mdpreview").plugin,
@@ -78,9 +79,10 @@ lazy.setup({
   --
   -- lsp
   require("plugins.LSP.cmp").plugin,
-  require("plugins.LSP.conform").plugin,
   require("plugins.LSP.lspconfig").plugin,
   require("plugins.LSP.mason").plugin,
+  require("plugins.LSP.conform").plugin,
+  require("plugins.LSP.autopairs").plugin,
   -- dap
   require("plugins.DAP.main").plugin,
 })
