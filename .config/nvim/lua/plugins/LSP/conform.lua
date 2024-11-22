@@ -1,6 +1,6 @@
 local M = {}
 
-  M.plugin = {
+M.plugin = {
   "stevearc/conform.nvim",
 	event = { "BufReadPre", "BufNewFile" },
 	setup = function()
@@ -10,25 +10,13 @@ local M = {}
 
 M.setup = function()
   local ok = require("utils.check_requires").check({"conform",})
-  if not ok then 
+  if not ok then
     return
   end
 
   local conform = require("conform")
 
-  local ops = {
-		prettier = {
-			config_command = "--config",
-			config_names = {
-				".prettierrc",
-				".prettierrc.json",
-				".prettierrc.yml",
-				".prettierrc.yaml",
-				".prettierrc.json5",
-				".prettierrc.js",
-				".editorconfig",
-			},
-			config_path = ".prettierrc.json",
+		conform.setup({
 			formatters_by_ft = {
 				javascript = { "prettier" },
 				typescript = { "prettier" },
@@ -50,13 +38,24 @@ M.setup = function()
 				async = false,
 				timeout_ms = 1000,
 			},
-		}
-  }
+		  prettier = {
+			config_command = "--config",
+			config_names = {
+				".prettierrc",
+				".prettierrc.json",
+				".prettierrc.yml",
+				".prettierrc.yaml",
+				".prettierrc.json5",
+				".prettierrc.js",
+				".editorconfig",
+			},
+			config_path = ".prettierrc.json",
+		},
+		})
 
-	conform.setup(opts)
+  local km = require("utils.keymap").keymap
 
-	local km = require("utils.keymap").keymap
-	km({"n", "v"}, "<leader>mp" , function()
+  km({ "n", "v" }, "<leader>mp", function()
 			conform.format({
 				lsp_fallback = true,
 				async = false,
@@ -65,9 +64,8 @@ M.setup = function()
 		end, { desc = "Format file or range (in visual mode)" })
 end
 
-if not pcall(debug.getlocal, 4, 1) then
+if not pcall(debug.getlocal, 4,1) then
   M.setup()
 end
-
 
 return M

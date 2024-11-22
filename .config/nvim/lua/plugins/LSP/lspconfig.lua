@@ -6,36 +6,31 @@ M.plugin = {
   dependencies = {
     "hrsh7th/cmp-nvim-lsp",
     { "antosha417/nvim-lsp-file-operations", config = true },
+    { "folke/neodev.nvim", opts = {} },
   },
-    "nvimtools/none-ls.nvim",
-  event = "VeryLazy",
   config = function()
     M.setup()
   end,
 }
 
 M.setup = function()
-  local ok = require("utils.check_requires").check({"lspconfig", "mason-lspconfig",})
-  if not ok then 
-    return
-  end
 
-  local lspconfig = require("lspconfig")
+local ok = require("utils.check_requires").check({"lspconfig", "mason-lspconfig", "cmp_nvim_lsp", })
 
-    -- import mason_lspconfig plugin
-    local mason_lspconfig = require("mason-lspconfig")
+if not ok then
+  return
+end
+ local mason_lspconfig = require("mason-lspconfig")
+local lspconfig = require("lspconfig")
+ local cmp_nvim_lsp = require("cmp_nvim_lsp")
 
-    -- import cmp-nvim-lsp plugin
-    local cmp_nvim_lsp = require("cmp_nvim_lsp")
+local keymap = require("utils.keymap").keymap
 
-    local keymap = require("utils.keymap").keymap -- for conciseness
-
-    vim.api.nvim_create_autocmd("LspAttach", {
-      group = vim.api.nvim_create_augroup("UserLspConfig", {}),
-      callback = function(ev)
-        -- Buffer local mappings.
-        -- See `:help vim.lsp.*` for documentation on any of the below functions
-        local opts = { buffer = ev.buf, silent = true }
+-- if there is a language server active in the file
+vim.api.nvim_create_autocmd('LspAttach', {
+  desc = 'LSP actions',
+  callback = function(event)
+    local opts = { buffer = event.buf, silent = true }
 
         -- set keybinds
         opts.desc = "Show LSP references"
@@ -76,11 +71,11 @@ M.setup = function()
 
         opts.desc = "Restart LSP"
         keymap("n", "<leader>rs", ":LspRestart<CR>", opts) -- mapping to restart lsp if necessary
-      end,
-    })
 
-    -- used to enable autocompletion (assign to every lsp server config)
-    local capabilities = cmp_nvim_lsp.default_capabilities()
+
+  end
+})
+   local capabilities = cmp_nvim_lsp.default_capabilities()
 
     -- Change the Diagnostic symbols in the sign column (gutter)
     -- (not in youtube nvim video)
@@ -97,22 +92,7 @@ M.setup = function()
           capabilities = capabilities,
         })
       end,
-      ["svelte"] = function()
-        -- configure svelte server
-        lspconfig["svelte"].setup({
-          capabilities = capabilities,
-          on_attach = function(client, bufnr)
-            vim.api.nvim_create_autocmd("BufWritePost", {
-              pattern = { "*.js", "*.ts" },
-              callback = function(ctx)
-                -- Here use ctx.match instead of ctx.file
-                client.notify("$/onDidChangeTsOrJsFile", { uri = ctx.match })
-              end,
-            })
-          end,
-        })
-      end,
-      ["graphql"] = function()
+    ["graphql"] = function()
         -- configure graphql language server
         lspconfig["graphql"].setup({
           capabilities = capabilities,
@@ -143,11 +123,11 @@ M.setup = function()
           },
         })
       end,
-    })
+  })
+
 end
 
-
-if not pcall(debug.getlocal, 4,1) then
+if not pcall(debug.getlocal, 4, 1) then
   M.setup()
 end
 

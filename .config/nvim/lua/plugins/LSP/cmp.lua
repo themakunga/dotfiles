@@ -14,20 +14,21 @@ M.plugin = {
     "saadparwaiz1/cmp_luasnip",
     "rafamadriz/friendly-snippets",
     "onsails/lspkind.nvim",
+    "brenoprata10/nvim-highlight-colors",
   },
-  setup = function()
+  config = function()
     M.setup()
   end,
 }
 
 M.setup = function()
-  local ok = require("utils.check_requires").check({"cmp", "luasnip", "lspkind", })
+local ok = require("utils.check_requires").check({"cmp",})
 
-  if not ok then 
-    return
-  end
+if not ok then
+  return
+end
 
-  local cmp = require("cmp")
+local cmp = require("cmp")
     local luasnip = require("luasnip")
     local lspkind = require("lspkind")
 
@@ -78,9 +79,8 @@ M.setup = function()
 
 end
 
-if not pcall(debug,getlocal, 4,1) then
+if not pcall(debug.getlocal, 4,1) then
   M.setup()
 end
 
 return M
-
