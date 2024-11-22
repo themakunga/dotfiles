@@ -34,7 +34,7 @@ M.setup = function()
   
   local km = require("utils.keymap").keymap
 
-  km("n", "<leader>lg", "<cmd>LazyGit<CR>", { desc = "LazyGit" })
+  km("n", "<leader>gg", "<cmd>LazyGit<CR>", { desc = "LazyGit" })
 end
 
 if not pcall(debug.getlocal, 4, 1) then
