@@ -52,6 +52,7 @@ lazy.setup({
   require("plugins.helpers.todocomments").plugin,
   require("plugins.helpers.logs").plugin,
   require("plugins.helpers.comment").plugin,
+  require("plugins.helpers.sorter").plugin,
 
   -- buffer
   require("plugins.buffer.tabby").plugin,
@@ -82,8 +83,8 @@ lazy.setup({
   -- require("plugins.LSP.cmp").plugin,
   -- require("plugins.LSP.lspconfig").plugin,
   -- require("plugins.LSP.mason").plugin,
-  -- require("plugins.LSP.conform").plugin,
-  -- require("plugins.LSP.autopairs").plugin,
+  require("plugins.LSP.conform").plugin,
+  require("plugins.LSP.autopairs").plugin,
   -- dap
   require("plugins.DAP.main").plugin,
 })
