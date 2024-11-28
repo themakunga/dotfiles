@@ -21,7 +21,7 @@ M.plugin = {
 }
 
 M.setup = function()
-  local ok = require("utils.check_requires").check({ "lazygit", "telescope", })
+  local ok = require("utils.check_requires").check({ "lazygit", "telescope" })
   if not ok then
     return
   end
@@ -31,7 +31,7 @@ M.setup = function()
   telescope.load_extension("lazygit")
 
   lazygit.setup()
-  
+
   local km = require("utils.keymap").keymap
 
   km("n", "<leader>gg", "<cmd>LazyGit<CR>", { desc = "LazyGit" })
@@ -42,4 +42,3 @@ if not pcall(debug.getlocal, 4, 1) then
 end
 
 return M
-

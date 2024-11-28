@@ -34,8 +34,8 @@ lazy.setup({
 
   -- theme
   require("themes.tokyonight").plugin,
-  
-  -- ui 
+
+  -- ui
   require("ui.alpha").plugin,
   require("ui.noice").plugin,
   require("ui.lualine").plugin,
@@ -45,7 +45,7 @@ lazy.setup({
 
   -- telescope
   require("ui.telescope").plugin,
-  
+
   -- helpers
   require("plugins.helpers.autosession").plugin,
   require("plugins.helpers.trouble").plugin,
@@ -57,7 +57,7 @@ lazy.setup({
   -- buffer
   require("plugins.buffer.tabby").plugin,
   require("plugins.buffer.buffer_manager").plugin,
-   
+
   -- nvim tree
   require("plugins.tree.nvim-tree").plugin,
 
@@ -79,10 +79,8 @@ lazy.setup({
   require("plugins.markdown.mdsectionnumbers").plugin,
   --
   -- lsp
-  require("plugins.LSP.lsp-zero").plugin,
-  -- require("plugins.LSP.cmp").plugin,
-  -- require("plugins.LSP.lspconfig").plugin,
-  -- require("plugins.LSP.mason").plugin,
+  require("plugins.LSP.mason").plugin,
+  require("plugins.LSP.main").plugin,
   require("plugins.LSP.conform").plugin,
   require("plugins.LSP.autopairs").plugin,
   -- dap
