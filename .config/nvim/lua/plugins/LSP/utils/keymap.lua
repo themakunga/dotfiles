@@ -12,7 +12,7 @@ local mapping = function(bufnr)
   vim.cmd("command! LspDiagLine lua vim.diagnostic.open_float()")
   vim.cmd("command! LspSignatureHelp lua vim.lsp.buf.signature_help()")
 
-  local buf_keymap = require("rin.utils.keymap").buf_keymap
+  local buf_keymap = require("utils.keymap").buf_keymap
 
   buf_keymap(bufnr, "n", "<Leader>lf", ":LspRefs<CR>")
   buf_keymap(bufnr, "n", "<Leader>ld", ":LspDef<CR>")
