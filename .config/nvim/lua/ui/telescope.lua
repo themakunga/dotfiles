@@ -37,7 +37,12 @@ M.setup = function()
         override_generic_sorter = false,
         override_file_sorter = true,
       }
-    }
+    },
+    pickers = {
+      find_files = {
+        hidden = true,
+      },
+    },
   })
   telescope.load_extension("fzy_native")
 
