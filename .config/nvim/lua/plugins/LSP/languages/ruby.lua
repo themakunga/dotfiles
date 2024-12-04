@@ -6,10 +6,9 @@ end
 local lspconfig = require("lspconfig")
 local null_ls = require("null-ls")
 
-lspconfig.lua_ls.setup({})
-
 null_ls.setup({
   sources = {
-    null_ls.builtins.formatting.stylua,
+    null_ls.builtins.diagnoticss.rubocop,
+    null_ls.builtins.formatting.rubocop,
   },
 })

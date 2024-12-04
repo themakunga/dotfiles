@@ -1,0 +1,8 @@
+require("plugins.LSP.languages.lua")
+require("plugins.LSP.languages.typescript")
+require("plugins.LSP.languages.golang")
+require("plugins.LSP.languages.terraform")
+require("plugins.LSP.languages.bash")
+require("plugins.LSP.languages.zsh")
+require("plugins.LSP.languages.vue")
+require("plugins.LSP.languages.ruby")
