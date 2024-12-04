@@ -45,6 +45,7 @@ lazy.setup({
 
   -- telescope
   require("ui.telescope").plugin,
+  require("ui.telescope-ui").plugin,
 
   -- helpers
   require("plugins.helpers.autosession").plugin,
@@ -79,8 +80,9 @@ lazy.setup({
   require("plugins.markdown.mdsectionnumbers").plugin,
   --
   -- lsp
+  require("plugins.LSP.lsp-config").plugin,
+  require("plugins.LSP.linter").plugin,
   require("plugins.LSP.mason").plugin,
-  require("plugins.LSP.main").plugin,
   require("plugins.LSP.conform").plugin,
   require("plugins.LSP.autopairs").plugin,
   -- dap

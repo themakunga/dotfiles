@@ -65,6 +65,8 @@ zstyle ':completion:*' menu no
 zstyle ':fzf-tab:complete:cd:*' fzf-preview 'ls --color $realpath'
 
 # aliases
+source ~/.zsh_scripts/alias.zsh
+
 alias ls='ls --color'
 alias ll='ls -lrt'
 alias llh='ls -ltrh'
