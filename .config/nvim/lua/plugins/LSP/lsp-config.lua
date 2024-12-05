@@ -2,9 +2,6 @@ local M = {}
 
 M.plugin = {
   "neovim/nvim-lspconfig",
-  {
-    "nvimtools/none-ls.nvim",
-  },
   config = function()
     M.setup()
   end,

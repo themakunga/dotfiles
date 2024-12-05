@@ -79,9 +79,9 @@ M.setup = function()
       "stylua", -- lua formatter
       "isort", -- python formatter
       "black", -- python formatter
-      "rubocop",
       "pylint", -- python linter
       "eslint_d", -- js linter
+      "rubocop",
     },
   })
 end
