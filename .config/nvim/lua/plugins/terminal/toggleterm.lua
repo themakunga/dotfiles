@@ -20,6 +20,7 @@ M.setup = function()
   toggleterm.setup({
     direction = "float",
     close_on_exit = false,
+    persist_mode = true,
     float_opts = {
       border = "curved",
     },

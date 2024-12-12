@@ -26,8 +26,14 @@ M.setup = function()
 
   
   nvim_tree.setup({
-			update_cwd = true,
 			hijack_cursor = true,
+		open_on_tab = true,
+		update_cwd = true,
+   update_focused_file = {
+      enable = true,
+      update_root = true,
+      update_cwd = true,
+   },
 			view = {
 				width = 35,
 				relativenumber = false,
@@ -46,20 +52,20 @@ M.setup = function()
 						default = "",
 						symlink = "",
 						bookmark = "◉",
-						git = {
-							unstaged = "",
-							staged = "",
-							unmerged = "",
-							renamed = "",
-							deleted = "",
-							untracked = "",
-							ignored = "",
-						},
 						folder = {
 							default = "",
 							open = "",
 							symlink = "",
 						},
+					git = {
+      deleted = "",
+      ignored = "◌",
+      renamed = "➜",
+      staged = "✓",
+      unmerged = "",
+      unstaged = "✗",
+      untracked = "★",
+   },
 					},
 					show = {
 						git = false,
@@ -81,6 +87,7 @@ M.setup = function()
 				custom = {
 					".DS_Store",
 				},
+			  dotfiles = false,
 			},
 			git = {
 				ignore = false,

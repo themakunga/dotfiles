@@ -9,6 +9,8 @@ end
 local lspconfig = require("lspconfig")
 local capabilities = require("plugins.LSP.capabilities")
 
-lspconfig.lua_ls.setup({
+lspconfig.gopls.setup({
   capabilities = capabilities,
+  cmd = { "gopls" },
+  filetypes = { "go", "gomod", "gowork", "gotmpl" },
 })

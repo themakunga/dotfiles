@@ -16,10 +16,10 @@ M.setup = function()
   if not ok then
     return
   end
-
   local mason = require("mason")
   local mason_lspconfig = require("mason-lspconfig")
   local mason_tool_installer = require("mason-tool-installer")
+  local capabilities = require("plugins.LSP.capabilities")
 
   mason.setup({
     ui = {
@@ -37,7 +37,7 @@ M.setup = function()
       "bashls",
       "cssls",
       "diagnosticls",
-      "dockerl",
+      "dockerls",
       "docker_compose_language_service",
       "dotls",
       "eslint",
@@ -68,7 +68,9 @@ M.setup = function()
     },
     handlers = {
       function(server_name)
-        require("lspconfig")[server_name].setup({})
+        require("lspconfig")[server_name].setup({
+          capabilities = capabilities,
+        })
       end,
     },
   })
@@ -76,10 +78,10 @@ M.setup = function()
   mason_tool_installer.setup({
     ensure_installed = {
       "prettier", -- prettier formatter
-      "stylua", -- lua formatter
-      "isort", -- python formatter
-      "black", -- python formatter
-      "pylint", -- python linter
+      "stylua",   -- lua formatter
+      "isort",    -- python formatter
+      "black",    -- python formatter
+      "pylint",   -- python linter
       "eslint_d", -- js linter
       "rubocop",
     },
