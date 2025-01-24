@@ -1,0 +1,55 @@
+# NeoVIM config
+
+this is a personal configuration, not to be use by everyone, is created to my confort on development and file editing
+
+- [ ] core modules
+	- [ ] lazy vim
+	- [ ] configuration lua
+	- [ ] keymaps basics
+- [ ] utils
+	- [ ] requires checker
+	- [ ] reusable icons
+- [ ] user interface
+	- [ ] tokyonight storm theme
+	- [ ] treesitter
+	- [ ] nvim tree
+	- [ ] aerial
+	- [ ] alpha
+	- [ ] lualine
+	- [ ] minimap
+	- [ ] noice
+	- [ ] telescope
+	- [ ] whichkey
+	- [ ] bufferline
+- [ ] plugins
+	- [ ] lsp
+		- [ ] terraform
+		- [ ] lua
+		- [ ] nodejs languages
+		- [ ] golang
+		- [ ] docker
+		- [ ] python
+		- [ ] shell
+	- [ ] dap
+		- [ ] golang
+		- [ ] nodejs languages
+	- [ ] git
+		- [ ] lazygit
+		- [ ] gitisigns
+		- [ ] gitportal
+	- [ ] helpers
+		- [ ] autosession
+		- [ ] comments
+		- [ ] logs
+		- [ ] sorter
+		- [ ] todo comments
+		- [ ] trouble
+	- [ ] markdown
+		- [ ] markview
+		- [ ] mdpreview
+		- [ ] mdsectionnumbers
+		- [ ] mdtoc
+		- [ ] obsidian
+	- [ ] terminal
+		- [ ] lazydev
+		- [ ] toggleterm

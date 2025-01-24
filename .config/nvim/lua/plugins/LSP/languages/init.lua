@@ -1,6 +1,0 @@
-require("plugins.LSP.languages.lua")
-require("plugins.LSP.languages.docker")
-require("plugins.LSP.languages.nodejs-langs")
-require("plugins.LSP.languages.go")
-require("plugins.LSP.languages.terraform")
-require("plugins.LSP.languages.python")
