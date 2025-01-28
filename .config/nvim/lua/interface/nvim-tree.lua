@@ -13,7 +13,7 @@ M.plugin = {
 }
 
 M.setup = function()
-    local ok = require("utils.check-requires").check({ "nvim-tree", "which-key" })
+    local ok = require("utils.check-requires").check({ "nvim-tree" })
     if not ok then
         return
     end

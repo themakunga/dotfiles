@@ -2,10 +2,7 @@ local M = {}
 
 M.plugin = {
   "nvim-treesitter/nvim-treesitter",
-  build = ":TSUpdate",
-  event = { "VeryLazy" },
-  lazy = vim.fn.argc(-1) == 0,
-  cmd = { "TSUpdateSync", "TSUpdate", "TSInstall" },
+  event = "VeryLazy",
   config = function()
     M.setup()
   end,
@@ -24,9 +21,9 @@ M.setup = function()
   treesitter_configs.setup({
     highlight = {
       enable = true,
-      additional_vim_regex_highlighting = true,
+      additional_vim_regex_highlighting = false,
     },
-    indent = { enable = true, disable = { "yaml" } },
+    indent = { enable = true },
 
     autotag = { enable = true },
     ensure_installed = {

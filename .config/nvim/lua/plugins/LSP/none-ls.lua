@@ -21,10 +21,13 @@ M.setup = function()
   local completion      = null_ls.builtins.completion
 
   local null_ls_options = {
-    sources = {
       debug = false,
-      formatting.stylua,
+    sources = {
 
+formatting.prettier.with { extra_args = { "--no-semi", "--single-quote", "--jsx-single-quote" } },
+    formatting.black.with { extra_args = { "--fast" } },
+    -- formatting.yapf,
+    formatting.stylua,
     }
   }
 

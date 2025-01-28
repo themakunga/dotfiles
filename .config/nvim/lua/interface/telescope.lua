@@ -39,7 +39,7 @@ M.setup = function()
   local trouble_telescope = require("trouble.sources.telescope")
 
   telescope.load_extension("ui-select")
-  telescope.load_extension('media_files')
+  telescope.load_extension("media_files")
 
   local custom_actions = transform_mod({
     open_trouble_qflist = function(prompt_bufnr)
@@ -164,11 +164,10 @@ M.setup = function()
         -- filetypes whitelist
         -- defaults to {"png", "jpg", "mp4", "webm", "pdf"}
         filetypes = { "png", "webp", "jpg", "jpeg" },
-        find_cmd = "rg" -- find command (defaults to `fd`)
-      }
+        find_cmd = "fd", -- find command (defaults to `fd`)
+      },
     },
   })
-
 
   local keymap = vim.keymap.set
 
