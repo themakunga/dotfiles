@@ -24,11 +24,15 @@ M.setup = function()
     workspaces = {
       {
         name = "personal",
-        path = "~/vaults/personal",
+        path = "~/Obsidian/vaults/personal",
       },
       {
         name = "work",
-        path = "~/vaults/work",
+        path = "~/Obsidian/vaults/",
+      },
+      {
+        name = "42Devs",
+        path = "~/Obsidian/vaults/42devs/",
       },
     },
   }
