@@ -22,6 +22,7 @@ M.init = function()
     require("plugins.markdown.mdsectionnumber").plugin,
     require("plugins.markdown.mdtoc").plugin,
     require("plugins.obsidian.obsidian").plugin,
+    require("plugins.testing.neotest").plugin,
   }
 end
 
