@@ -26,14 +26,12 @@ M.setup = function()
     },
   })
 
-  local km = vim.keymap.set
+  local keymap = require("utils.keymapping").global
 
-  local opts = { desc = "Toggle Terminal" }
+  local opts = "Toggle Terminal"
 
-  km("n", "<A-t>", ":ToggleTerm direction=float<CR>", opts)
-  km("t", "<A-t>", "<C-\\><C-n> :ToggleTerm<CR>", opts)
-
-  require("plugins.terminal.terminal-functions").functions()
+  keymap("n", "<A-t>", ":ToggleTerm direction=float<CR>", opts)
+  keymap("t", "<A-t>", "<C-\\><C-n> :ToggleTerm<CR>", opts)
 end
 
 if not pcall(debug.getlocal, 4, 1) then

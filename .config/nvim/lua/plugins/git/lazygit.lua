@@ -2,7 +2,7 @@ local M = {}
 
 M.plugin = {
     "kdheepak/lazygit.nvim",
-    lazy = true,
+    lazy = false,
     cmd = {
         "LazyGit",
         "LazyGitConfig",
@@ -25,16 +25,14 @@ M.setup = function()
     if not ok then
         return
     end
-    local lazygit = require("lazygit")
     local telescope = require("telescope")
 
     telescope.load_extension("lazygit")
 
-    lazygit.setup()
 
-    local km = require("utils.keymap").keymap
+    local km = require("utils.keymapping").global
 
-    km("n", "<leader>gg", "<cmd>LazyGit<CR>", { desc = "LazyGit" })
+    km("n", "<leader>LG", "<cmd>LazyGit<CR>", "LazyGit")
 end
 
 if not pcall(debug.getlocal, 4, 1) then

@@ -2,18 +2,23 @@ local M = {}
 
 M.init = function()
   return {
-    require("interface.theme").plugin,
-    require("interface.alpha").plugin,
-    require("interface.nvim-tree").plugin,
-    require("interface.whichkey").plugin,
-    require("interface.minimap").plugin,
-    require("interface.telescope").plugin,
-    require("interface.noice").plugin,
-    require("interface.lualine").plugin,
-    require("interface.treesitter").plugin,
-    require("interface.trouble").plugin,
-    require("interface.bufferline").plugin,
-    require("interface.indent-blankline").plugin,
+    require("interface.theme.tokionight").plugin,
+    require("interface.welcome.alpha").plugin,
+    require("interface.tree-view.nvim-tree").plugin,
+    require("interface.editor.snacks").plugin,
+    require("interface.editor.bufferline").plugin,
+    require("interface.editor.telescope").plugin,
+    require("interface.editor.treesitter").plugin,
+    require("interface.editor.lualine").plugin,
+    require("interface.editor.minimap").plugin,
+    require("interface.editor.indent-blankline").plugin,
+    require("interface.editor.whichkey").plugin,
+    require("interface.editor.comments").plugin,
+    require("interface.editor.todo-comments").plugin,
+    require("interface.editor.log-highlight").plugin,
+    require("interface.editor.tssorter").plugin,
+    require("interface.notifications.noice").plugin,
+    require("interface.notifications.trouble").plugin,
   }
 end
 

@@ -18,18 +18,19 @@ end
 
 local lazy = require("lazy")
 
-require("core").init()
+require("config").init()
+
 -- main configuration
 lazy.setup({
 
   -- basic setup
-  checker = {
-    notify = false,
-    enabled = true,
-  },
-  change_detection = {
-    notify = false,
-  },
+  -- checker = {
+  --   notify = false,
+  --   enabled = true,
+  -- },
+  -- change_detection = {
+  --   notify = false,
+  -- },
 
   require("interface").init(),
   require("plugins").init(),
