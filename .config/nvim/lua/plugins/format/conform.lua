@@ -32,6 +32,10 @@ M.setup = function()
       liquid = prettier,
       lua = { "stylua" },
       python = { "isort", "black" },
+      terraform = { "terraform_fmt" },
+      hcl = { "packer_fmt" },
+      tf = { "terrraform_fmt" },
+      ["terraform-vars"] = { "terraform_fmt" },
     },
     format_on_save = {
       lsp_fallback = true,
@@ -44,6 +48,7 @@ M.setup = function()
         ".prettierrc",
         ".prettierrc.json",
         ".prettierrc.yml",
+        ".prettierrc.yaml",
         ".prettierrc.yaml",
         ".prettierrc.json5",
         ".prettierrc.js",
@@ -69,4 +74,3 @@ if not pcall(debug.getlocal, 4, 1) then
 end
 
 return M
-
