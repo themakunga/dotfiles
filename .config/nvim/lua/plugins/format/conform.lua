@@ -34,9 +34,8 @@ M.setup = function()
       python = { "isort", "black" },
     },
     format_on_save = {
-      lsp_fallback = true,
-      async = false,
       timeout_ms = 500,
+      lsp_format = "fallback",
     },
     prettier = {
       config_command = "--config",
@@ -69,4 +68,3 @@ if not pcall(debug.getlocal, 4, 1) then
 end
 
 return M
-

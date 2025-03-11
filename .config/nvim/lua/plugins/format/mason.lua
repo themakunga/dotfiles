@@ -6,6 +6,7 @@ M.plugin = {
     "williamboman/mason-lspconfig.nvim",
     "WhoIsSethDaniel/mason-tool-installer.nvim",
   },
+  build = ":MasonUpdate",
   config = function()
     M.setup()
   end,
@@ -40,7 +41,6 @@ M.setup = function()
 
   local mason_lspconfig_settings = {
     ensure_installed = servers,
-    automatic_installation = true,
     handlers = {
       function(server_name)
         require("lspconfig")[server_name].setup({})

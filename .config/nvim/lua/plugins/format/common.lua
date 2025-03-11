@@ -30,7 +30,7 @@ M.mason_servers = {
   "terraformls",
   "tflint",
   "ts_ls",
-  "vuels",
+  "volar",
   "yamlls",
 }
 
