@@ -32,6 +32,10 @@ M.setup = function()
       liquid = prettier,
       lua = { "stylua" },
       python = { "isort", "black" },
+      terraform = { "terraform_fmt" },
+      hcl = { "packer_fmt" },
+      tf = { "terrraform_fmt" },
+      ["terraform-vars"] = { "terraform_fmt" },
     },
     format_on_save = {
       timeout_ms = 500,
@@ -43,6 +47,7 @@ M.setup = function()
         ".prettierrc",
         ".prettierrc.json",
         ".prettierrc.yml",
+        ".prettierrc.yaml",
         ".prettierrc.yaml",
         ".prettierrc.json5",
         ".prettierrc.js",
