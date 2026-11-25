@@ -1,33 +1,39 @@
 # Dotfiles
 
+![Lua](https://img.shields.io/badge/Lua-2C2D72?style=flat-square&logo=lua&logoColor=white)
+![Shell](https://img.shields.io/badge/Shell-4EAA25?style=flat-square&logo=gnubash&logoColor=white)
+![Nix](https://img.shields.io/badge/Nix-5277C3?style=flat-square&logo=nixos&logoColor=white)
+
 <!-- mtoc-start -->
 
-* [Services / Configurations available](#services--configurations-available)
-* [Instalation](#instalation)
-* [Pre-requisites](#pre-requisites)
-  * [GIT](#git)
-  * [Nerd Fonts](#nerd-fonts)
-  * [Kitty](#kitty)
-  * [Homebrew (if you are using macOS)](#homebrew-if-you-are-using-macos)
-  * [TMUX](#tmux)
-  * [NVM and nodeJS](#nvm-and-nodejs)
-    * [Install PNPM](#install-pnpm)
-  * [Docker (& Colima)](#docker--colima)
-    * [Docker](#docker)
-    * [Colima](#colima)
-  * [ZSH](#zsh)
-  * [Oh My Posh](#oh-my-posh)
-  * [Pulumi and Terraform](#pulumi-and-terraform)
-    * [Terraform](#terraform)
-    * [Pulumi](#pulumi)
-  * [STOW](#stow)
-  * [Fuzzy Finder (FZF)](#fuzzy-finder-fzf)
-  * [Lazygit](#lazygit)
-  * [NeoVim](#neovim)
+- [Services / Configurations available](#services--configurations-available)
+- [Instalation](#instalation)
+- [Pre-requisites](#pre-requisites)
+  - [GIT](#git)
+  - [Nerd Fonts](#nerd-fonts)
+  - [Kitty](#kitty)
+  - [Homebrew (if you are using macOS)](#homebrew-if-you-are-using-macos)
+  - [TMUX](#tmux)
+  - [NVM and nodeJS](#nvm-and-nodejs)
+    - [Install PNPM](#install-pnpm)
+  - [Docker (& Colima)](#docker--colima)
+    - [Docker](#docker)
+    - [Colima](#colima)
+  - [ZSH](#zsh)
+  - [Oh My Posh](#oh-my-posh)
+  - [Pulumi and Terraform](#pulumi-and-terraform)
+    - [Terraform](#terraform)
+    - [Pulumi](#pulumi)
+  - [STOW](#stow)
+  - [Fuzzy Finder (FZF)](#fuzzy-finder-fzf)
+  - [Lazygit](#lazygit)
+  - [NeoVim](#neovim)
 
 <!-- mtoc-end -->
 
-This repo works as a config backup to my shell environment and neovim configuration, this is for my use only but if you like it feel free to use it, if you have any suggestion, raise a issue
+This repo works as a config backup to my shell environment and neovim
+configuration, this is for my use only but if you like it feel free to use it,
+if you have any suggestion, raise a issue
 
 as linux I only use Debian so thats how the scripts will be
 
@@ -39,7 +45,9 @@ as linux I only use Debian so thats how the scripts will be
 
 ## Instalation
 
-make sure to complete the [Pre-requisites](#Pre-requisites) , using a true color terminal emulator like wezterm or iTerm2, you can clone the repository and run `stow` in the dotfiles dir
+make sure to complete the [Pre-requisites](#Pre-requisites) , using a true color
+terminal emulator like wezterm or iTerm2, you can clone the repository and run
+`stow` in the dotfiles dir
 
 ```bash
 git clone https://github.com/themakunga/dotfiles .dotfiles # this clone the repo to a hidden directory
@@ -47,13 +55,15 @@ cd .dotfiles
 stow .
 ```
 
-you will need to relogin to the session several times, 3 aproximatelly if you test `neovim` right after install stow.
+you will need to relogin to the session several times, 3 aproximatelly if you
+test `neovim` right after install stow.
 
 ## Pre-requisites
 
 ### GIT
 
-Git is a free and open source distributed version control system designed to handle everything from small to very large projects with speed and efficiency.
+Git is a free and open source distributed version control system designed to
+handle everything from small to very large projects with speed and efficiency.
 
 [documentation](https://git-scm.com)
 
@@ -71,7 +81,9 @@ sudo apt install git
 
 ### Nerd Fonts
 
-Nerd Fonts is a project that patches developer targeted fonts with a high number of glyphs (icons). Specifically to add a high number of extra glyphs from popular 'iconic fonts' such as Font Awesome, Devicons, Octicons, and others.
+Nerd Fonts is a project that patches developer targeted fonts with a high number
+of glyphs (icons). Specifically to add a high number of extra glyphs from
+popular 'iconic fonts' such as Font Awesome, Devicons, Octicons, and others.
 
 [documentation](https://github.com/ryanoasis/nerd-fonts?tab=readme-ov-file#option-2-homebrew-fonts)
 
@@ -98,8 +110,10 @@ The fast, feature-rich, GPU based terminal emulator
 curl -L https://sw.kovidgoyal.net/kitty/installer.sh | sh /dev/stdin
 ```
 
-> [!note] Note
-> The binaries will be installed in the standard location for your OS, /Applications/kitty.app on macOS and ~/.local/kitty.app on Linux. The installer only touches files in that directory. To update kitty, simply re-run the command.
+> [!note] Note The binaries will be installed in the standard location for your
+> OS, /Applications/kitty.app on macOS and ~/.local/kitty.app on Linux. The
+> installer only touches files in that directory. To update kitty, simply re-run
+> the command.
 
 ### Homebrew (if you are using macOS)
 
@@ -115,7 +129,9 @@ Homebrew installs the stuff you need that Apple (or your Linux system) didn’t.
 
 ### TMUX
 
-tmux is a terminal multiplexer. It lets you switch easily between several programs in one terminal, detach them (they keep running in the background) and reattach them to a different terminal.
+tmux is a terminal multiplexer. It lets you switch easily between several
+programs in one terminal, detach them (they keep running in the background) and
+reattach them to a different terminal.
 
 [documentation](https://github.com/tmux/tmux/wiki)
 
@@ -133,7 +149,9 @@ sudo apt install tmux
 
 ### NVM and nodeJS
 
-nvm is a version manager for node.js, designed to be installed per-user, and invoked per-shell. nvm works on any POSIX-compliant shell (sh, dash, ksh, zsh, bash), in particular on these platforms: unix, macOS, and windows WSL.
+nvm is a version manager for node.js, designed to be installed per-user, and
+invoked per-shell. nvm works on any POSIX-compliant shell (sh, dash, ksh, zsh,
+bash), in particular on these platforms: unix, macOS, and windows WSL.
 
 [documentation](https://github.com/nvm-sh/nvm)
 
@@ -143,7 +161,8 @@ nvm is a version manager for node.js, designed to be installed per-user, and inv
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash
 ```
 
-_this comand install and make available the `nvm` command on your terminal, after that you need to re login_
+_this comand install and make available the `nvm` command on your terminal,
+after that you need to re login_
 
 **Install Node Version**
 
@@ -165,7 +184,12 @@ curl -fsSL https://get.pnpm.io/install.sh | sh -
 
 #### Docker
 
-Docker is an open platform for developing, shipping, and running applications. Docker enables you to separate your applications from your infrastructure so you can deliver software quickly. With Docker, you can manage your infrastructure in the same ways you manage your applications. By taking advantage of Docker's methodologies for shipping, testing, and deploying code, you can significantly reduce the delay between writing code and running it in production.
+Docker is an open platform for developing, shipping, and running applications.
+Docker enables you to separate your applications from your infrastructure so you
+can deliver software quickly. With Docker, you can manage your infrastructure in
+the same ways you manage your applications. By taking advantage of Docker's
+methodologies for shipping, testing, and deploying code, you can significantly
+reduce the delay between writing code and running it in production.
 
 [documentation](https://docs.docker.com/guides/docker-overview/)
 
@@ -218,7 +242,8 @@ docker context use colima
 
 ### ZSH
 
-Zsh is a shell designed for interactive use, although it is also a powerful scripting language.
+Zsh is a shell designed for interactive use, although it is also a powerful
+scripting language.
 
 [documentation](https://www.zsh.org)
 
@@ -242,7 +267,8 @@ chsh -s $(which zsh)
 
 ### Oh My Posh
 
-Oh My Posh is a custom prompt engine for any shell that has the ability to adjust the prompt string with a function or variable.
+Oh My Posh is a custom prompt engine for any shell that has the ability to
+adjust the prompt string with a function or variable.
 
 [documentation](https://ohmyposh.dev/docs/)
 
@@ -252,7 +278,9 @@ Oh My Posh is a custom prompt engine for any shell that has the ability to adjus
 brew install jandedobbeleer/oh-my-posh/oh-my-posh
 ```
 
-> As the standard terminal has issues displaying the ANSI characters correctly, you might want to skip loading just for that terminal and instead of the line above, place this in your ~/.zshrc:
+> As the standard terminal has issues displaying the ANSI characters correctly,
+> you might want to skip loading just for that terminal and instead of the line
+> above, place this in your ~/.zshrc:
 
 ```bash
 if [ "$TERM_PROGRAM" != "Apple_Terminal" ]; then
@@ -260,7 +288,8 @@ if [ "$TERM_PROGRAM" != "Apple_Terminal" ]; then
 fi
 ```
 
-Note this will still load Oh My Posh for iTerm2 or any other modern day macOS terminal that supports ANSI characters.
+Note this will still load Oh My Posh for iTerm2 or any other modern day macOS
+terminal that supports ANSI characters.
 
 **linux**
 
@@ -272,7 +301,8 @@ curl -s https://ohmyposh.dev/install.sh | bash -s
 
 #### Terraform
 
-Infrastructure automation to provision and manage resources in any cloud or data center.
+Infrastructure automation to provision and manage resources in any cloud or data
+center.
 
 [documentation](https://developer.hashicorp.com/terraform?product_intent=terraform)
 
@@ -293,7 +323,8 @@ sudo apt update && sudo apt install terraform
 
 #### Pulumi
 
-Pulumi is an open source infrastructure as code tool for creating, deploying, and managing cloud infrastructure.
+Pulumi is an open source infrastructure as code tool for creating, deploying,
+and managing cloud infrastructure.
 
 [documentation](https://www.pulumi.com/docs/)
 
@@ -311,7 +342,12 @@ curl -fsSL https://get.pulumi.com | sh
 
 ### STOW
 
-GNU Stow is a symlink farm manager which takes distinct packages of software and/or data located in separate directories on the filesystem, and makes them appear to be installed in the same place. For example, /usr/local/bin could contain symlinks to files within /usr/local/stow/emacs/bin, /usr/local/stow/perl/bin etc., and likewise recursively for any other subdirectories such as .../share, .../man, and so on.
+GNU Stow is a symlink farm manager which takes distinct packages of software
+and/or data located in separate directories on the filesystem, and makes them
+appear to be installed in the same place. For example, /usr/local/bin could
+contain symlinks to files within /usr/local/stow/emacs/bin,
+/usr/local/stow/perl/bin etc., and likewise recursively for any other
+subdirectories such as .../share, .../man, and so on.
 
 [documentation](https://www.gnu.org/software/stow/)
 
@@ -330,7 +366,10 @@ brew install stow
 
 ### Fuzzy Finder (FZF)
 
-It's an interactive filter program for any kind of list; files, command history, processes, hostnames, bookmarks, git commits, etc. It implements a "fuzzy" matching algorithm, so you can quickly type in patterns with omitted characters and still get the results you want.
+It's an interactive filter program for any kind of list; files, command history,
+processes, hostnames, bookmarks, git commits, etc. It implements a "fuzzy"
+matching algorithm, so you can quickly type in patterns with omitted characters
+and still get the results you want.
 
 [documentation](https://github.com/junegunn/fzf)
 
@@ -378,7 +417,10 @@ lazygit --version
 
 ### NeoVim
 
-Neovim is a refactor, and sometimes redactor, in the tradition of Vim (which itself derives from Stevie). It is not a rewrite but a continuation and extension of Vim. Many clones and derivatives exist, some very clever—but none are Vim. Neovim is built for users who want the good parts of Vim, and more.
+Neovim is a refactor, and sometimes redactor, in the tradition of Vim (which
+itself derives from Stevie). It is not a rewrite but a continuation and
+extension of Vim. Many clones and derivatives exist, some very clever—but none
+are Vim. Neovim is built for users who want the good parts of Vim, and more.
 
 [documentation](https://neovim.io)
 
@@ -396,3 +438,15 @@ git checkout stable
 cd neovim && make CMAKE_BUILD_TYPE=RelWithDebInfo
 sudo make install
 ```
+
+## Repository reference
+
+| Path                           | Purpose               |
+| ------------------------------ | --------------------- |
+| [`.config/`](.config/)         | Project configuration |
+| [`.installers/`](.installers/) | Project configuration |
+| [`nix/`](nix/)                 | Nix configuration     |
+| [`.tmux.conf`](.tmux.conf)     | Project configuration |
+
+The default branch is `main`. Use the tracked manifests and scripts above when
+preparing changes; keep local credentials and generated files out of commits.
